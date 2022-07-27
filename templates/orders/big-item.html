@@ -1,0 +1,66 @@
+<div order-id="{% id %}" order-price="{% price %}" order-discount="{% discounts %}" order-state="{% state %}">
+    <div class="order-main">
+        <table class="order-line">
+            <tr>
+                <td>
+                    <div class="order-title">Заказ <a class="order-id">#{% id %}</a></div>
+                </td>
+                <td>
+                    <div class="order-state">{% name %}</div>
+                </td>
+            </tr>
+        </table>
+        <div id="addinfo">
+            {% address-full %}
+            <div class="order-subtitle">Доставка: </div>
+            <div class="order-subitem">{% take_date %}</div>
+        </div>
+    </div>
+    <div hidden class="orders-container orders-max">
+        <table class="orders-items item-list">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th width="1">Тара</th>
+                    <th width="1">Количество</th>
+                    <th width="1">Цена</th>
+                </tr>
+            </thead>
+            {% items %}
+        </table>
+        <div class="order-comment">{% comment %}</div>
+        <table class="order-times">
+            <tr>
+                <td>
+                    <div class="order-time-create">
+                        &bull; СОЗДАН: {% create_time %}
+                    </div>
+                </td>
+                <td>
+                    <div class="order-time-update">
+                        &bull; ОБНОВЛЕН: {% update_time %}
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="orders-container orders-min">
+        <table class="orders-items-table">
+            <tr>
+                <td>
+                    <div class="orders-items">
+                        {% items-min %}
+                    </div>
+                </td>
+                <td width="1">
+                    <div class="item-rect" style="margin: 0 0 0 5px">
+                        <div class="item-img">
+                            <img accent src="/images/icon-point.svg" />
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="order-comment">{% comment %}</div>
+    </div>
+</div>

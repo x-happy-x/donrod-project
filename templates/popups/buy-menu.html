@@ -1,0 +1,73 @@
+<div buy-menu centered hidden>
+    <h3 title class="title">Оформление заказа</h3>
+    <div id="address-selector">
+        <table class="address-top">
+            <tr>
+                <td>
+                    <div class="address-title">Выберите адрес доставки</div>
+                </td>
+                <td width="1">
+                    <div class="address-btn add-btn">Добавить</div>
+                </td>
+                <td width="1">
+                    <div class="address-btn del-btn">Удалить</div>
+                </td>
+            </tr>
+        </table>
+
+        <div id="addresses"></div>
+        <div class="address-empty">
+            У вас нет сохраненных адресов.<br>Чтобы продолжить, пожалуйста, добавьте его
+        </div>
+    </div>
+
+    <div class="delimiter" style="width: 88%; margin-left: 6%; margin-bottom: 10px"></div>
+    <div class="radio-group full-frame-2 horizontal">
+        <div style="padding-left: 0px;">
+            <input id="call" type="checkbox">
+            <label for="call" class="small"> Уведомить по телефону </label>
+        </div>
+    </div>
+    <div class="input-container input-right">
+        <input id="phone" type="phone" class="full-frame-2 textbox" placeholder="Номер телефона">
+        <div class="placeholder">Номер телефона</div>
+    </div>
+    <div class="input-container input-right">
+        <input id="time" type="time" class="full-frame-2 textbox" placeholder="Предпочтительное время доставки" value="12:00">
+        <div class="placeholder show-placeholder">Предпочтительное время доставки</div>
+    </div>
+    <div class="input-container input-right">
+        <input id="date" type="date" class="full-frame-2 textbox" placeholder="Предпочтительное дата доставки">
+        <div class="placeholder show-placeholder">Предпочтительная дата доставки</div>
+    </div>
+
+    <table class="cart-info" style="margin-top: 10px">
+        <tr>
+            <td>
+                <h4 style="text-transform:none;">Доставка:</h4>
+            </td>
+            <td width="150px">
+                <div promo-price></div>
+                <p class="money-s"> ₽ </p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div class="delimiter"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h4 style="text-transform:none;">К оплате:</h4>
+            </td>
+            <td width="150px">
+                <div price></div>
+                <p class="money-s"> ₽ </p>
+            </td>
+        </tr>
+    </table>
+    <input id="pay" type="button" class="full-frame-2" value="Оплатить">
+    <div id="privacy-message">
+        <h6 style="text-transform:none; text-align:center; width:100%">О возможном времени доставки вас уведомят по телефону или электронной почте</h6>
+    </div>
+</div>

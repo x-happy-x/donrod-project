@@ -1,0 +1,92 @@
+/**/
+[popups-controls] {
+  position: fixed;
+  transition: opacity 0.2s;
+  transform: translate(-50%);
+}
+[popups-controls] > * {
+  cursor: pointer;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  border: 2px solid var(--shadow-3);
+  background-color: var(--bg-color-1);
+  box-shadow: 2px 2px 5px var(--shadow-3);
+  padding: 2px;
+  margin-top: 5px;
+}
+[popups-controls] > * img {
+  filter: invert(0.3);
+  height: 100%;
+  width: 100%;
+}
+
+[popups] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+[popups] [centered] {
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+[popups] > * {
+  overflow-y: auto;
+  min-width: 350px;
+  width: fit-content;
+  max-width: 90%;
+  min-height: 100px;
+  height: auto;
+  max-height: 90%;
+  padding: 10px 0px;
+  border: 2px solid var(--shadow-1);
+  border-radius: 16px;
+  box-shadow: var(--shadow-3) 0px 3px 8px;
+  background-color: var(--bg-color-1);
+}
+[popups] [title] {
+  padding: 0 5%;
+}
+[popups] [cart] .linear {
+  margin: 20px 5% 10px;
+  width: 90%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--shadow-2);
+  border-collapse: separate;
+}
+[popups] .delimiter {
+  margin: 5px 5px;
+  width: calc(100% - 10px);
+  height: 1px;
+  background-color: var(--shadow-3);
+}
+[popups] .cart-info {
+  width: 90%;
+  margin: 30px 5% 0px;
+}
+[popups] .cart-info .money-s {
+  font-size: 20px;
+  color: var(--accent-1);
+  font-weight: bold;
+  display: inline;
+}
+[popups] .cart-info td:nth-child(2) {
+  text-align: right;
+}
+[popups] .cart-info [weight],
+[popups] .cart-info [price],
+[popups] .cart-info [orig-price],
+[popups] .cart-info [promo-price],
+[popups] .cart-info [count] {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  display: inline;
+}
+
+/*# sourceMappingURL=popup.css.map */

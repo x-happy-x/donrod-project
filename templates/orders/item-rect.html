@@ -1,0 +1,25 @@
+<div class="item-rect">
+    <div class="item-img" onmouseenter="this.parentElement.querySelector('.item-description').style.opacity = 1;" onmouseleave="this.parentElement.querySelector('.item-description').style.opacity = 0;">
+        <img {% item->image-class %} src="{% item->image-path %}{% item->image-url %}{% item->image %}" />
+    </div>
+    <div class="item-description">
+        <table class="item-list">
+            <thead>
+            <tr>
+                <th>Название</th>
+                <th width="1">Тара</th>
+                <th width="1">Количество</th>
+                <th width="1">Цена</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{% item->name %} ({% item->weight %}{% item->unit %})</td>
+                <td>{% item->addon_name %}</td>
+                <td><a>x</a>{% count %}</td>
+                <td>{% price %}<a>₽</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" promptOnRemoteOverwrite="CHECK_TIMESTAMP" serverName="dr.happy-x.ru" createEmptyFolders="true" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="dr.happy-x.ru">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/local" />
+            <excludedPath local="true" path="$PROJECT_DIR$/backups" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.old" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.tools" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="донской-родник.рф">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/local" />
+            <excludedPath local="true" path="$PROJECT_DIR$/backups" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.old" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.tools" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

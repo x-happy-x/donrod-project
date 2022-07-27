@@ -1,0 +1,10 @@
+{
+    "name": "Донской родник",
+    "charset": "utf-8",
+    "host": "mail.jino.ru",
+    "password": "PassForMail05",
+    "port": 465,
+    "send-mail": "support@happy-x.ru",
+    "reply-mail": "support@happy-x.ru",
+    "bcc-mail": "personal@m-abdul.ru"
+}

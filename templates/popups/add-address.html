@@ -1,0 +1,80 @@
+<div add-address centered hidden>
+    <h3 title class="title">Добавление адреса</h3>
+    <div id="group-inputs">
+        <input hidden id="address_code" name='code' type="text" value="Код: 00 000 000 000 0000 0000" class="full-frame-2" disabled>
+        <div class="input-container">
+            <input address='state' id="input_1" type="text" class="full-frame-2" placeholder="Область" autocomplete="off">
+            <label class="status" for="input_1"></label>
+            <div class="placeholder">Область</div>
+        </div>
+        <div class="input-container">
+            <input address='locality, city, area' id="input_2" type="text" class="full-frame-2" placeholder="Населеный пункт" autocomplete="off" disabled>
+            <label class="status" for="input_2"></label>
+            <div class="placeholder">Населеный пункт</div>
+        </div>
+
+        <table class="full-frame-2">
+            <tr>
+                <td>
+                    <div class="input-container input-left">
+                        <input address='street' id="input_3" type="text" class="full-frame-0" placeholder="Улица" autocomplete="off" disabled>
+                        <label class="status" for="input_3"></label>
+                        <div class="placeholder">Улица</div>
+                    </div>
+                </td>
+                <td width=1>
+                    <div class="input-container input-right">
+                        <input address='house' id="input_4" type="text" class="full-frame-0" placeholder="Дом" autocomplete="off" disabled>
+                        <label class="status" for="input_4"></label>
+                        <div class="placeholder">Дом</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="radio-group full-frame-2 horizontal">
+            <div style="padding-left: 0px;">
+                <input id="manyfloors" checked type="checkbox">
+                <label for="manyfloors" class="small"> Здание многоэтажное </label>
+            </div>
+        </div>
+
+
+        <table id="detail-table" class="full-frame-2">
+            <tr>
+                <td>
+                    <div class="input-container detail-left">
+                        <input name='entrance' type="number" class="full-frame-0" placeholder="Подъезд" autocomplete="off">
+                        <div class="placeholder">Подъезд</div>
+                    </div>
+                </td>
+                <td width=50%>
+                    <div class="input-container detail-right">
+                        <input name='floor' type="number" class="full-frame-0" placeholder="Этаж" autocomplete="off">
+                        <div class="placeholder">Этаж</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="input-container detail-left">
+                        <input name='apartment' type="number" class="full-frame-0" placeholder="Квартира" autocomplete="off">
+                        <div class="placeholder">Квартира</div>
+                    </div>
+                </td>
+                <td width=50%>
+                    <div class="input-container detail-right">
+                        <input name='dcode' type="number" class="full-frame-0" placeholder="Домофон" autocomplete="off">
+                        <div class="placeholder">Домофон</div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="input-container">
+            <input name='note' type="text" class="full-frame-2" placeholder="Примечание" autocomplete="off">
+            <div class="placeholder">Примечание</div>
+        </div>
+    </div>
+    <input id='address_add' name="button" type="submit" class="full-frame-2" value="Добавить" disabled>
+    <div id="input_datalist" items-for="state" class="textbox full-frame-0" hidden> </div>
+</div>

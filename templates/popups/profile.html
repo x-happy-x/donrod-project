@@ -1,0 +1,53 @@
+<form profile centered hidden>
+    <h3 title class="title"> Регистрация </h3>
+    <div class="subtitle" subtitle hidden></div>
+    <div sign-control id="sign_inputs">
+        <div id="profile-classes" style="text-align: center"> Типы пользователей не загружены, обновите страницу </div>
+        <input name="name" type="text" class="full-frame-2" placeholder="Ваше имя">
+        <input name="sign" type="text" value="up" hidden>
+        <input name="mail" type="text" class="full-frame-2" placeholder="Электронная почта">
+        <input name="pass" type="password" class="full-frame-2" placeholder="Пароль">
+        <div message class="full-frame-2" style=" font-size: 0.8em;">
+            Длина пароля от 8 до 32 символов.<br> Пароль должен состоять из латинских символов верхнего и нижнего регистра и цифр.</div>
+        <div class="radio-group full-frame-2 horizontal">
+            <div style="padding-left: 0px;">
+                <input id="signin" type="checkbox">
+                <label for="signin" class="small"> У меня уже есть аккаунт </label>
+            </div>
+        </div>
+    </div>
+    <input id="cart-btn" type="button" class="full-frame-2" value="Корзина">
+    <input id="orders-btn" type="button" class="full-frame-2" value="Мои заказы">
+    <input id="crm-btn" type="button" class="full-frame-2" onclick="window.location = '/pages/admin?crm'" value="CRM-система">
+    <input name="button" type="submit" class="full-frame-2" value="РЕГИСТРАЦИЯ">
+    <div id="privacy-message">
+        <h6 style="text-transform:none; text-align:center; width:100%">Нажимая кнопку "Регистрация",<br>Вы соглашаетесь c условиями <a href="/pages/privacy">политики конфиденциальности</a></h6>
+    </div>
+    <style>
+        #cart-btn {
+            background-color: #222;
+            color: white;
+        }
+        
+        #cart-btn:hover {
+            border-color: #222;
+            background-color: white;
+            color: #222;
+        }
+        
+        #orders-btn {
+            background-color: #222;
+            color: white;
+        }
+        
+        .subtitle {
+            margin-bottom: 20px;
+        }
+        
+        #orders-btn:hover {
+            border-color: #222;
+            background-color: white;
+            color: #222;
+        }
+    </style>
+</form>

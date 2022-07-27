@@ -1,0 +1,237 @@
+@import "main-cfg";
+$scrolled-first-page: var(--scrolled-first-page);
+$body-height: var(--body-height);
+$actionbar-height: var(--actionbar-height);
+[page] {
+    min-height: $body-height;
+    position: relative;
+    width: 100%;
+    #logo_video {
+        background-size: cover;
+        background-position: 50% 50%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $body-height;
+    }
+    .hide-video {
+        background-color: #0004;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $body-height;
+    }
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: $body-height;
+        table {
+            width: 100%;
+            height: 100%;
+            padding: 40px;
+            .big-title {
+                opacity: $scrolled-first-page;
+                width: 100%;
+                text-align: center;
+                color: #fff;
+                padding: 24px 0;
+                padding: 0 40px;
+                font-weight: 600;
+                font-size: 68px;
+                line-height: 1.1;
+                letter-spacing: 1;
+                transition: all 0.1s linear;
+                .info-text {
+                    margin: 30px auto;
+                    text-align: center;
+                    font-size: 24px;
+                    max-width: 600px;
+                    line-height: 1.5;
+                    font-weight: 400;
+                    @media screen and (max-height: 800px) {
+                        font-size: 20px;
+                        line-height: 1.5;
+                    }
+                    @media screen and (max-height: 600px) {
+                        font-size: 18px;
+                        line-height: 1.3;
+                    }
+                    @media screen and (max-height: 500px) {
+                        font-size: 16px;
+                        line-height: 1.2;
+                    }
+                    @media screen and (max-width: 900px) {
+                        font-size: 20px;
+                        line-height: 1.3;
+                    }
+                    @media screen and (max-width: 600px) {
+                        font-size: 18px;
+                        line-height: 1.2;
+                    }
+                }
+                .info-phone {
+                    color: $accent-1;
+                    font-weight: 500;
+                }
+                .medium-text {
+                    font-weight: 100;
+                    color: var(--accent-1);
+                    padding: 14px 0;
+                }
+                .bottom-text {
+                    font-weight: 400;
+                    padding: 10px 0 30px 0;
+                    font-size: 20px;
+                }
+                .buy-btn {
+                    width: fit-content;
+                    font-size: 18px;
+                    font-weight: bold;
+                    padding: 14px 30px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 25px;
+                    transform: translate(-50%, -50%);
+                    border-radius: $default-radius;
+                    background-color: $button-color-1;
+                    color: $button-text-color-1;
+                }
+                @media screen and (max-width: 1500px) {
+                    font-size: 60px;
+                }
+                @media screen and (max-width: 1100px) {
+                    font-size: 50px;
+                }
+                @media screen and (max-width: 800px) {
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    [footbar] {
+        text-align: center;
+        width: 100%;
+        background-color: $text-color-1;
+        color: $bg-color-1;
+        line-height: 1.35;
+        font-weight: 700;
+        padding: 30px;
+        font-size: 14px;
+        p {
+            text-transform: uppercase;
+            display: inline;
+            font-weight: 100;
+        }
+    }
+    .items-title {
+        padding-top: 30px;
+        text-align: center;
+        font-size: 42px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        line-height: 1.23;
+        @media screen and (max-width: 1200px) {
+            font-size: 38px;
+        }
+        @media screen and (max-width: 960px) {
+            margin-bottom: 20px;
+        }
+        @media screen and (max-width: 640px) {
+            font-size: 30px;
+        }
+    }
+    .items-subtitle {
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center;
+        font-size: 24px;
+        font-style: 400;
+        line-height: 1.5;
+        max-width: 560px;
+        @media screen and (max-width: 1200px) {
+            font-size: 22px;
+        }
+        @media screen and (max-width: 640px) {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+    }
+    .about-name {
+        font-weight: 300;
+    }
+    .about-container {
+        display: table;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+        @media screen and (max-width: 1200px) {
+            max-width: 960px;
+            padding: 0;
+        }
+        @media screen and (max-width: 960px) {
+            max-width: 640px;
+            display: block;
+        }
+        .about-center {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            width: 50%;
+            @media screen and (max-width: 960px) {
+                padding: 0 20px 0 20px;
+                box-sizing: border-box;
+                width: 100%;
+                display: block;
+            }
+            img {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0 30px 0 30px;
+                @media screen and (max-width: 960px) {
+                    max-width: 90%;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .about-block {
+            display: table-cell;
+            vertical-align: middle;
+            height: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            width: 25%;
+            &.about-right {
+                text-align: right;
+                @media screen and (max-width: 960px) {
+                    text-align: left;
+                }
+            }
+            @media screen and (max-width: 960px) {
+                width: 100%;
+                margin-bottom: 45px;
+            }
+            .about-item {
+                padding: 45px 20px 20px;
+                .about-subtitle {
+                    font-weight: 700;
+                    font-size: 22px;
+                    padding-bottom: 10px;
+                    line-height: 1.35;
+                }
+                .about-text {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 1.55;
+                }
+            }
+        }
+    }
+}

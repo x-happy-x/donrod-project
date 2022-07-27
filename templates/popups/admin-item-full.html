@@ -1,0 +1,73 @@
+<div admin-item-full centered hidden>
+    <h3 title class="title">Товар</h3>
+    <table>
+        <tr>
+            <td>
+                <div class="first-column">
+                    <div class="image-wrapper">
+                        <img id="item-image" alt="">
+                        <div id="item-image-controls">
+                            <div><img src="/images/icon-edit.svg" alt=""></div>
+                            <div><img src="/images/icon-delete.svg" alt=""></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="input-container">
+                            <input id="item-name-input" type="text" maxlength="255" class="full-frame-0" placeholder="Название">
+                            <label class="placeholder" for="item-name-input">Название</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="item-desc-input" type="text" maxlength="2500" class="full-frame-0" placeholder="Описание">
+                            <label class="placeholder" for="item-desc-input">Описание</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="item-count-input" type="number" min="0" max="100000" class="full-frame-0" placeholder="Количество">
+                            <label class="placeholder" for="item-count-input">Количество</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="item-price-input" type="number" min="0" max="100000" class="full-frame-0" placeholder="Цена">
+                            <label class="placeholder" for="item-price-input">Цена</label>
+                        </div>
+                        <table width="100%">
+                            <tr>
+                                <td>
+                                    <div class="input-container">
+                                        <input id="item-weight-input" type="number" min="0" max="100000" class="full-frame-0" placeholder="Объём/вес">
+                                        <label class="placeholder" for="item-weight-input">Объём/вес</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-container" style="margin-left: 10px;">
+                                        <input id="item-unit-input" type="text" maxlength="20" class="full-frame-0" placeholder="Ед. измерения">
+                                        <label class="placeholder" for="item-unit-input">Ед. измерения</label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="radio-group full-frame-0 horizontal">
+                            <div style="padding-left: 0px;">
+                                <input id="item-view-status" type="checkbox">
+                                <label for="item-view-status" class="small">Отображать на сайте</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </td>
+            <td class="table-top">
+                <div class="second-column">
+                    <div class="admin-groups">
+                        <div id="admin-item-categories" class="admin-group">Категории</div>
+                        <div id="admin-item-addons" class="admin-group">Дополнения</div>
+                        <div id="admin-item-rating" class="admin-group">Оценки</div>
+                        <div id="admin-item-cart" class="admin-group">В корзине</div>
+                        <div id="admin-item-orders" class="admin-group">Куплено</div>
+                        <div id="admin-item-stat" class="admin-group">Продажи</div>
+                    </div>
+                    <div id="admin-group-content">
+
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

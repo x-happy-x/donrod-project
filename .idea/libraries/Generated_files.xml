@@ -1,0 +1,34 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/scripts/address.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/files.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/image-slider.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/item.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/main.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/notify.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/pacman.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/pages.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/popups.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/templates.min.js" />
+        <item url="file://$PROJECT_DIR$/scripts/user.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/scripts/address.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/files.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/image-slider.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/item.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/main.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/notify.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/pacman.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/pages.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/popups.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/templates.min.js" />
+      <root url="file://$PROJECT_DIR$/scripts/user.min.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

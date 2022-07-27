@@ -1,0 +1,287 @@
+@charset "UTF-8";
+/* Текстовые поля */
+input[type=text],
+input[type=password],
+input[type=number],
+textarea,
+.textbox {
+  background-color: var(--shadow-2);
+  color: var(--text-color-1);
+  border: 1px solid var(--shadow-1);
+  padding: 10px 10px;
+  text-align: left;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--default-radius);
+}
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=number]:focus,
+textarea:focus,
+.textbox:focus {
+  background-color: var(--bg-color-1);
+  border: 1px solid var(--text-color-1);
+}
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=number]::placeholder,
+textarea::placeholder,
+.textbox::placeholder {
+  color: var(--text-color-3);
+}
+input[type=text].error,
+input[type=password].error,
+input[type=number].error,
+textarea.error,
+.textbox.error {
+  background-color: var(--error-color);
+}
+
+/* Кнопки */
+input[type=button],
+input[type=submit],
+input[type=reset],
+button {
+  cursor: pointer;
+  background-color: var(--button-color-1);
+  border: 1px solid var(--shadow-1);
+  color: var(--button-text-color-1);
+  max-width: 100%;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: 400;
+  border-radius: var(--default-radius);
+  transition: all 0.2s ease-in-out;
+}
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+button:hover {
+  background-color: var(--bg-color-1);
+  color: var(--button-color-1);
+  border: 1px solid var(--button-color-1);
+}
+input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active,
+button:active {
+  transform: scale(0.95);
+}
+
+input[type=reset] {
+  background-color: var(--button-color-2);
+}
+input[type=reset]:hover {
+  color: var(--button-color-2);
+  border: 1px solid var(--button-color-2);
+}
+
+button {
+  color: var(--button-text-color-3);
+  background-color: var(--button-color-3);
+}
+button:hover {
+  color: var(--button-color-3);
+  border: 1px solid var(--button-color-3);
+}
+
+/* Поле для загрузки файла */
+input[type=file] {
+  opacity: 0;
+  width: 0.1px;
+  height: 0.1px;
+  position: absolute;
+}
+input[type=file]:hover + label {
+  background-color: var(--bg-color-1);
+  border: 1px dashed black;
+}
+input[type=file] + label {
+  overflow: hidden;
+  border: 1px dashed var(--shadow-1);
+  transition: all 0.3s ease-in-out;
+}
+input[type=file] + label.is-active {
+  background-color: var(--shadow-3);
+  border: 1px dashed var(--accent-2);
+}
+
+/* Radio и Checkbox группы*/
+.radio-group {
+  overflow: hidden;
+}
+.radio-group.vertical div {
+  margin: 5px 0px;
+}
+.radio-group.horizontal td {
+  padding-left: 10px;
+}
+.radio-group.horizontal td:first-child {
+  padding-left: 0px;
+}
+.radio-group div {
+  width: 100%;
+  display: inline-block;
+}
+.radio-group input[type=radio],
+.radio-group input[type=checkbox] {
+  display: none;
+}
+.radio-group input[type=radio]:checked + label,
+.radio-group input[type=checkbox]:checked + label {
+  background: var(--button-color-1);
+  color: var(--button-text-color-1);
+  border: 1px solid var(--shadow-3);
+}
+.radio-group input[type=radio]:disabled + label,
+.radio-group input[type=checkbox]:disabled + label {
+  background: var(--shadow-3);
+  color: var(--button-text-color-3);
+}
+.radio-group label {
+  background: var(--shadow-2);
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  padding: 7px 0px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--shadow-1);
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+.radio-group label:hover {
+  background: var(--bg-color-2);
+  color: var(--accent-1);
+  border: 1px solid var(--accent-1);
+}
+
+/* Слайдер */
+.range-slider,
+.range-ticks,
+.label-range {
+  display: flex;
+}
+
+.range-slider {
+  flex-flow: column nowrap;
+  margin: 0 auto;
+  max-width: 95%;
+  padding: 5px 0;
+  font-size: calc(18px + 0.9vw);
+  box-sizing: border-box;
+}
+.range-slider input[type=range] {
+  background-color: rgba(0, 0, 0, 0.3137254902);
+  border: 1px solid var(--shadow-1);
+  font: 1em/1.5 "Poppins", sans-serif;
+  display: block;
+  padding: 0 0.3em;
+  width: 100%;
+  appearance: none;
+}
+.range-slider input[type=range]:focus {
+  background-color: rgba(0, 0, 0, 0.4392156863);
+  outline: transparent;
+}
+
+.range-slider input[type=range],
+.range {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 40px;
+  border-radius: 40px;
+}
+
+.range-ticks {
+  font: 1em/1.5 "Poppins", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0.75em;
+  width: calc(100% - 1.5em);
+  height: 100%;
+}
+
+.range-tick,
+.range-tick-text {
+  display: inline-block;
+}
+
+.range-tick {
+  color: #454954;
+  font-size: 0.5em;
+  text-align: center;
+  width: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.range-tick-text {
+  transform: translateX(-50%);
+}
+
+.label-range {
+  font: 0.5em/1.5 "Poppins", sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.data-range {
+  display: flex;
+  height: 32px;
+  width: 32px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font: bold 0.5em/1.5 "Poppins", sans-serif;
+  color: var(--accent-1);
+  position: absolute;
+  top: 4px;
+  margin-left: 3px;
+  padding-top: 2px;
+  z-index: 2;
+  pointer-events: none;
+  background-color: white;
+  border: 3px solid var(--accent-1);
+  border-radius: 50%;
+}
+
+.title,
+.subtitle {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#group-inputs,
+.input-container {
+  position: relative;
+}
+
+.placeholder {
+  opacity: 0;
+  position: absolute;
+  font-size: 12px;
+  font-weight: bolder;
+  top: -2px;
+  left: calc(5% + 5px);
+  background-color: #eaeaea;
+  border-radius: var(--default-radius);
+  border: 1px solid var(--shadow-1);
+  padding: 1px 5px;
+}
+
+.placeholder.show-placeholder {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=form.css.map */

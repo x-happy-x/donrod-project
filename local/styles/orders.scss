@@ -1,0 +1,213 @@
+@import "main-cfg";
+
+$item-height: 55px;
+
+[orders] {
+  [title] {
+    margin-bottom: 15px;
+  }
+
+  [order-id] {
+    margin: 0px 20px;
+
+    .orders-container {
+      width: 100%;
+      transform: translate(0, -15px);
+      padding: 20px 20px 10px;
+      background-color: $bg-color-3;
+      box-shadow: 4px 4px 8px $shadow-2;
+      border: 2px solid $shadow-2;
+      border-top: none;
+      border-radius: 0 0 $buttons-radius $buttons-radius;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 10px;
+        transform: translate(-2px);
+        background-color: $bg-color-2;
+        box-shadow: -2px 7px 5px $shadow-1;
+        border: 2px solid $shadow-2;
+        border-top: none;
+        border-radius: 0 0 $buttons-radius $buttons-radius;
+      }
+    }
+
+    .orders-items-table {
+      width: 100%;
+      user-select: none;
+      height: $item-height;
+    }
+
+    .item-rect {
+      background: $shadow-2;
+      height: 100%;
+      overflow: hidden;
+      width: $item-height;
+      cursor: pointer;
+      padding: $default-radius;
+      border-radius: $default-radius;
+      border: 1px solid $shadow-1;
+      display: inline-block;
+      margin: 0 $default-radius 0 0;
+
+      .item-img {
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .item-description {
+        width: max-content;
+        background: $bg-color-2;
+        padding: $default-radius $buttons-radius;
+        border-radius: $default-radius;
+        border: 1px solid $shadow-2;
+        box-shadow: -2px 7px 5px $shadow-1;
+        transform: translate(-50%, -90%);
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 50%;
+      }
+
+      &:hover {
+        border-color: $accent-1;
+        padding: 3px;
+      }
+    }
+
+    .orders-min {
+      .orders-items {
+        white-space: nowrap;
+        overflow-y: hidden;
+        overflow-x: auto;
+        user-select: none;
+        height: $item-height;
+      }
+    }
+
+    .item-list {
+      width: 100%;
+
+      th {
+        padding-left: 10px;
+
+        &:nth-child(1) {
+          padding-left: 0px;
+          text-align: left;
+          margin: 0;
+        }
+
+        white-space: nowrap;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      td {
+        padding-left: 10px;
+
+        &:nth-child(1) {
+          white-space: inherit;
+          padding-left: 0px;
+          text-align: left;
+          margin: 0;
+        }
+
+        white-space: nowrap;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+
+    .orders-max {
+
+      .order-times {
+        text-align: center;
+        margin: 5px auto 0;
+
+        div {
+          margin: 0 10px;
+          font-weight: 700;
+          font-size: x-small;
+          color: $text-color-3;
+        }
+      }
+    }
+
+    .order-main {
+      width: 100%;
+      background-color: $bg-color-2;
+      box-shadow: 4px 4px 8px $shadow-2;
+      border: 2px solid $shadow-2;
+      border-radius: $buttons-radius;
+      padding: 10px 20px;
+
+      .order-line {
+        width: 100%;
+      }
+
+      .order-state {
+        font-size: small;
+        font-weight: 700;
+        margin-left: auto;
+        margin-right: 10px;
+        text-align: right;
+      }
+
+      .order-title {
+        font-weight: bolder;
+        font-size: medium;
+      }
+
+      .order-subtitle {
+        font-size: small;
+        font-weight: 700;
+        display: inline-block;
+      }
+
+      .order-subitem {
+        font-size: small;
+        display: inline-block;
+
+        .address-line {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+[pay] {
+  [title] {
+    margin-bottom: 15px;
+  }
+
+  .pay-load {
+    transform: translate(0, -30px);
+    position: relative;
+    width: 100%;
+    height: 300px;
+  }
+
+  .pay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100px);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
