@@ -1,3 +1,4 @@
 /.tools/
 /.old/
 /configs/*.json
+configs/api-settings.json

@@ -7,6 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/scripts" />
       <excludeFolder url="file://$MODULE_DIR$/styles" />
       <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/.old" />
+      <excludeFolder url="file://$MODULE_DIR$/.old/tild3536-3732-4061-a132-656134303361" />
     </content>
     <content url="file://$MODULE_DIR$/styles/fonts" />
     <content url="file://$MODULE_DIR$/styles/theme" />
