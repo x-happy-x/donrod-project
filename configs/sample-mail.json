@@ -1,0 +1,10 @@
+{
+    "name": "*name*",
+    "charset": "*charset*",
+    "host": "*host sender*",
+    "password": "*password*",
+    "port": *port*,
+    "send-mail": "*mail sender*",
+    "reply-mail": "*mail for reply*",
+    "bcc-mail": "*mail for hidden copy*"
+}

@@ -1,0 +1,5 @@
+{
+  "db-config": "*config file for database*",
+  "address-db": "*address database*",
+  "title": "*site name*"
+}
