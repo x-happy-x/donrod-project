@@ -1,0 +1,193 @@
+@import "main-cfg";
+[add-address] {
+    width: fit-content;
+    min-width: 300px;
+    max-width: 90%;
+    title {
+        padding-bottom: 10px;
+    }
+    #input_datalist {
+        background-color: #eaeaea;
+        border: 2px solid $shadow-1;
+        box-shadow: 2px 2px 10px $shadow-3;
+        position: absolute;
+        overflow-y: scroll;
+        width: 90%;
+        margin: 0px 5%;
+        max-height: 200px;
+        .input_datalist_title {
+            width: 100%;
+            font-size: 12px;
+            text-align: center;
+        }
+        .input_datalist_empty {
+            padding: 5px 10px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $accent-1;
+            border-radius: $default-radius;
+            border: 2px solid #eaeaea;
+        }
+    }
+    input[type="text"][success=true]+label.status {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 18px 7%;
+        width: 20px;
+        height: 20px;
+        background-color: limegreen;
+        -webkit-mask-image: url('/images/right.svg');
+        mask-image: url('/images/right.svg');
+    }
+    input[type="text"] {
+        background-color: $shadow-2;
+        color: $text-color-1;
+    }
+    div[accent-text] {
+        color: $text-color-3;
+        display: inline;
+    }
+    .input-left {
+        input[type="text"][success=true]+label.status {
+            margin: 15px 3%;
+        }
+        .placeholder {
+            left: 5px;
+        }
+    }
+    .input-right {
+        input[type="text"][success=true]+label.status {
+            margin: 15px 8%;
+        }
+        padding-left: 2.5%;
+        min-width: 100px;
+        width: fit-content;
+        max-width: 200px;
+        .placeholder {
+            left: 5px;
+        }
+    }
+    .detail-left {
+        .placeholder {
+            left: 7px;
+        }
+    }
+    .detail-right {
+        padding-left: 2.5%;
+        .placeholder {
+            left: 13px;
+        }
+    }
+}
+
+#address-selector {
+    width: 90%;
+    margin: 10px 5%;
+    .address-empty {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+        cursor: pointer;
+    }
+    .address-top {
+        width: 100%;
+        margin: 15px 0px 5px;
+        .address-title {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .address-btn {
+            cursor: pointer;
+            color: $button-text-color-1;
+            padding: 4px 7px;
+            margin-left: 10px;
+            border-radius: $buttons-radius;
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            display: inline;
+            &.add-btn {
+                background-color: $accent-2;
+            }
+            &.del-btn {
+                background-color: $accent-1;
+            }
+        }
+    }
+    #addresses {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 100%));
+        justify-content: center;
+        @media screen and (max-width: 800px) {
+            grid-template-columns: 100%;
+        }
+        .address-item-cont {
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-left: 0;
+            &:nth-child(2n) {
+                padding-right: 0;
+                padding-left: 10px;
+            }
+            @media screen and (max-width: 800px) {
+                padding-right: 0px;
+                padding-left: 0;
+                &:nth-child(2n) {
+                    padding-right: 0;
+                    padding-left: 0px;
+                }
+            }
+            width: 100%;
+            text-align: center;
+        }
+        .address-item {
+            &.selected {
+                background-color: $accent-2;
+                color: $button-text-color-1;
+                input {
+                    color: $button-text-color-1;
+                }
+            }
+            transition: all 0.1s;
+            cursor: pointer;
+            padding: 5px 15px;
+            width: 100%;
+            min-height: 100px;
+            height: 100%;
+            align-items: center;
+            border-radius: $buttons-radius;
+            background-color: $bg-color-3;
+            .address-line {
+                display: inline-block;
+            }
+            .address-lines {
+                font-weight: bold;
+                border-radius: $buttons-radius;
+            }
+            .address-details {
+                .address-detail {
+                    margin: 2px 3px 0;
+                    line-height: 1.3;
+                    padding: 4px 7px;
+                    font-size: small;
+                    background-color: $accent-2;
+                    border-radius: $buttons-radius;
+                    font-weight: bold;
+                    display: inline-block;
+                    color: $button-text-color-2;
+                    .address-detail-value {
+                        color: $button-text-color-1;
+                        font-weight: bold;
+                        display: inline;
+                    }
+                }
+            }
+            .address-note {
+                &[value=""] {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+<div class="address-item-cont">
+    <div class="address-item" address-id="{% id %}">
+        <div class="address-lines">
+            {% full %} {% house %}
+        </div>
+        <div class="address-details" {% manyfloors %}>
+            <div class="address-detail">
+                Подъезд:
+                <div class="address-detail-value">{% entrance %}</div>
+            </div>
+            <div class="address-detail">
+                Этаж:
+                <div class="address-detail-value">{% floor %}</div>
+            </div>
+            <div class="address-detail">
+                Квартира:
+                <div class="address-detail-value">{% apartment %}</div>
+            </div>
+            <div class="address-detail">
+                Домофон:
+                <div class="address-detail-value">{% dcode %}</div>
+            </div>
+        </div>
+        <input type="text" class="address-note full-frame-0" placeholder="Примечание" disabled value="{% note %}">
+    </div>
+</div>

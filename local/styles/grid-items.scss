@@ -1,0 +1,42 @@
+@import 'main-cfg';
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+    transition: 0.3s;
+}
+
+.adaptive-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 300px));
+    justify-content: center;
+    margin-bottom: 40px;
+    @media screen and (max-width: 1000px) {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    [item-id] {
+        display: block;
+        width: 100%;
+        @media screen and (max-width: 1000px) {
+            width: 250px;
+            display: inline-block;
+        }
+    }
+    padding: 20px;
+}
+
+.linear {
+    width: 100%;
+}
+
+.addons {
+    width: fit-content;
+    text-align: center;
+    margin: 5px auto;
+    font-size: 12px;
+    input+label {
+        border-radius: $buttons-radius;
+        padding: 5px 10px;
+    }
+}

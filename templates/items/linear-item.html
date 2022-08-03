@@ -1,0 +1,38 @@
+<tbody class="mini-item" item-id="{% id %}" category="{% category %}" data="{% index %}" step="1">
+    <tr>
+        <td rowspan="2" width=1>
+            <div image>
+                <img {% image-class %} src="{% image-path %}{% image-url %}{% image %}" />
+            </div>
+        </td>
+        <td>
+            <div name>
+                {% name %}
+            </div>
+        </td>
+        <td>
+            <div price>
+                {% price %}₽
+            </div>
+        </td>
+        <td rowspan="2" width=1>
+            <div count cart-count>
+                x{% incart %}
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div description>
+                <table class="radio-group full-frame-1 horizontal addons">
+                    {% addons-selector %}
+                </table>
+            </div>
+        </td>
+        <td width=1>
+            <div weight>
+                {% weight %} {% unit %}
+            </div>
+        </td>
+    </tr>
+</tbody>

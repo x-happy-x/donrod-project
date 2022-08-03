@@ -1,0 +1,47 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  transition: 0.3s;
+}
+
+.adaptive-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 300px));
+  justify-content: center;
+  margin-bottom: 40px;
+  padding: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .adaptive-container {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.adaptive-container [item-id] {
+  display: block;
+  width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .adaptive-container [item-id] {
+    width: 250px;
+    display: inline-block;
+  }
+}
+
+.linear {
+  width: 100%;
+}
+
+.addons {
+  width: fit-content;
+  text-align: center;
+  margin: 5px auto;
+  font-size: 12px;
+}
+.addons input + label {
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+/*# sourceMappingURL=grid-items.css.map */

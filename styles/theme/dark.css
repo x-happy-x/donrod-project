@@ -1,0 +1,29 @@
+:root {
+    --default-radius: 7px;
+    --accent-1: #ff6663;
+    --accent-2: #028090;
+    --accent-3: #00a896;
+    --accent-4: #02c39a;
+    --accent-5: #f0f3bd;
+    --filter-1: invert(64%) sepia(31%) saturate(7249%) hue-rotate(323deg) brightness(103%) contrast(103%);
+    --filter-2: invert(70%) sepia(29%) saturate(7006%) hue-rotate(339deg) brightness(101%) contrast(99%);
+    --filter-3: invert(74%) sepia(70%) saturate(459%) hue-rotate(346deg) brightness(104%) contrast(98%);
+    --filter-4: invert(98%) sepia(99%) saturate(547%) hue-rotate(29deg) brightness(82%) contrast(81%);
+    --filter-5: invert(54%) sepia(41%) saturate(312%) hue-rotate(112deg) brightness(97%) contrast(84%);            
+    --error-color: #bd0505;                   
+    --text-color-1: #ffffff;                  
+    --text-color-2: #e8e8e8;                  
+    --text-color-3: #c4c4c4;                  
+    --bg-color-1: #101010;                    
+    --bg-color-2: #191919;                    
+    --bg-color-3: #212121;                    
+    --shadow-1: #ffffff05;                    
+    --shadow-2: #ffffff15;                    
+    --shadow-3: #ffffff25;                    
+    --button-color-1: var(--accent-1);   
+    --button-color-2: var(--accent-2);   
+    --button-color-3: var(--text-color-3);     
+    --button-text-color-1: var(--bg-color-1);           
+    --button-text-color-2: #ffffff;           
+    --button-text-color-3: var(--bg-color-2);  
+}

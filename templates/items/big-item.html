@@ -1,0 +1,46 @@
+<div class="big-item" item-id="{% id %}" category="{% category %}" data="{% index %}" step="1">
+    <div class="big-item-padding">
+        <div image>
+            <img class="item-image" {% image-class %} src="{% image-path %}{% image-url %}{% image %}" />
+            <div class="soc-information">
+                <div promotion>Участвует в акции</div>
+                <div rating="{% rating %}">Рейтинг: {% rating %} ({% countrating %})</div>
+            </div>
+            <div soc-full class="soc-information-full"></div>
+        </div>
+        <div name>
+            {% name %} {% weight %}{% unit %}
+        </div>
+        <div description>
+            {% description %}
+        </div>
+        <table class="radio-group full-frame-1 horizontal addons">
+            {% addons-selector %}
+        </table>
+        <div class="price-box">
+            <div price>
+                {% price %}₽
+            </div>
+            <div price-history>
+                !
+            </div>
+        </div>
+        <div cart-control>
+            <table>
+                <tr>
+                    <td width=1>
+                        <div minus-cart>-</div>
+                    </td>
+                    <td>
+                        <div class="to-cart">
+                            <div count to-cart>В КОРЗИНУ</div>
+                        </div>
+                    </td>
+                    <td width=1>
+                        <div plus-cart>+</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

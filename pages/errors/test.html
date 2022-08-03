@@ -1,0 +1,118 @@
+<html lang="ru">
+
+<head>
+    <title>Тестовая страница</title>
+    <meta charset="utf-8">
+
+    <!-- Шрифт -->
+    <link href="/styles/fonts/Gilroy.css" rel="stylesheet"/>
+
+    <!-- Стили -->
+    <link href="/styles/theme/light.css" rel="stylesheet"/>
+    <link href="/styles/main.min.css" rel="stylesheet"/>
+
+    <link href="/styles/form.min.css" rel="stylesheet"/>
+    <link href="/styles/popup.min.css" rel="stylesheet"/>
+    <link href="/styles/notify.min.css" rel="stylesheet"/>
+    <link href="/styles/main-page.min.css" rel="stylesheet"/>
+    <!-- <link href="/styles/actionbar.min.css" rel="stylesheet" /> -->
+    <link href="/styles/admin.min.css" rel="stylesheet"/>
+
+    <!-- Скрипты -->
+    <script type="text/javascript" src="/scripts/main.min.js"></script>
+    <script type="text/javascript" src="/scripts/templates.min.js"></script>
+    <script type="text/javascript" src="/scripts/notify.min.js"></script>
+    <script type="text/javascript" src="/scripts/user.min.js"></script>
+    <script type="text/javascript" src="/scripts/popups.min.js"></script>
+
+    <script type="text/javascript" src="/scripts/pacman.min.js"></script>
+
+    <style>
+        .parent {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .game-block {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- Основная часть страницы -->
+<div body class="nav-closed">
+    <!-- Превью -->
+    <div id="page0" page=0>
+
+        <div id="parent" class="parent">
+            <div class="game-block">
+                <canvas id="canvas">
+                    Ваш браузер не поддерживает игру, эээх :(
+                </canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Слой для затемнения -->
+<div body-shadow hidden></div>
+
+<!-- Элементы сайта которые не должны скрываться при открытии всплывающих окон -->
+<div body-top>
+    <div nav-menu-extended class="nav-close">
+        <ul>
+        </ul>
+    </div>
+    <table action-bar>
+        <tr>
+            <td class="actionbar-left-td" width=1>
+                <div id="logo-block">
+                    <!-- <img id="show_extended" src="/images/icon-menu.png"> -->
+                    <a href="/pages">
+                        <div id="crm-logo" class="menu-item">
+                            Главная
+                        </div>
+                    </a>
+                </div>
+            </td>
+            <td class="actionbar-center-td">
+                <div id="current-state" class="actionbar-center menu-item">Тестовая страница</div>
+            </td>
+            <td width=1 class="actionbar-right-td">
+                <div id="actionbar-controls" class="menu-item actionbar-right">
+                    <!-- <img accent style="height: 30px;" src="/images/icon-add.svg"> -->
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- Всплывающие окна -->
+<div popups hidden></div>
+
+<div popups-controls hidden>
+    <div popup-close onclick="Popup.close()"><img src="/images/icon-close.svg" alt="Закрыть"></div>
+    <div popup-back onclick="Popup.back()"><img src="/images/icon-back.svg" alt="Назад"></div>
+</div>
+
+<!-- Уведомления -->
+<div notify>
+    <div notify-block></div>
+</div>
+<script>
+    let game;
+    add_on_loads(() => {
+        game = new Pacman('test', "#canvas", "#parent");
+        game.run(150,30);
+    })
+</script>
+</body>
+
+</html>

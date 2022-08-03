@@ -1,0 +1,15 @@
+<div id="group-addons" group-id="{% id %}">
+    <div id="group-control" class="radio-group full-frame-0 horizontal" style="text-align: center;">
+        <div style="padding-left: 0px; display: inline-block;width: auto;">
+            <input id="group-addons-{% id %}r" type="radio" {% radio %} name="group-addons-{% id %}" value="radio">
+            <label for="group-addons-{% id %}r" class="small" style="width: auto; padding-left: 10px; padding-right: 10px">Одиночный выбор</label>
+        </div>
+        <div style="display: inline-block;width: auto;">
+            <input id="group-addons-{% id %}c" type="radio" {% check %} name="group-addons-{% id %}" value="checkbox">
+            <label for="group-addons-{% id %}c" class="small" style="width: auto; padding-left: 10px; padding-right: 10px">Множественный выбор</label>
+        </div>
+    </div>
+    <div id="addons" class="radio-group full-frame-0 horizontal">
+        {% addon_list %}
+    </div>
+</div>

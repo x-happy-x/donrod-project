@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Шрифты -->
+    <link href="/styles/fonts/Gilroy.css" rel="stylesheet"/>
+
+    <!-- Стили -->
+    <link href="/styles/theme/light.css" rel="stylesheet"/>
+    <link href="/styles/main.min.css" rel="stylesheet"/>
+    <link href="/styles/form.min.css" rel="stylesheet"/>
+    <link href="/styles/popup.min.css" rel="stylesheet"/>
+    <link href="/styles/notify.min.css" rel="stylesheet"/>
+    <link href="/styles/grid-items.min.css" rel="stylesheet"/>
+    <link href="/styles/item.min.css" rel="stylesheet"/>
+    <link href="/styles/main-page.min.css" rel="stylesheet"/>
+    <link href="/styles/actionbar.min.css" rel="stylesheet"/>
+    <link href="/styles/address.min.css" rel="stylesheet"/>
+    <link href="/styles/orders.min.css" rel="stylesheet"/>
+
+    <!-- Скрипты -->
+    <script type="text/javascript" src="/scripts/main.min.js"></script>
+    <script type="text/javascript" src="/scripts/templates.min.js"></script>
+    <script type="text/javascript" src="/scripts/notify.min.js"></script>
+    <script type="text/javascript" src="/scripts/user.min.js"></script>
+    <script type="text/javascript" src="/scripts/popups.min.js"></script>
+    <script type="text/javascript" src="/scripts/address.min.js"></script>
+    <script type="text/javascript" src="/scripts/item.min.js"></script>
+
+    <!-- Заголовок -->
+    <title>Донской родник</title>
+
+</head>
+
+<body>
+<!-- Основная часть страницы -->
+<div body>
+    <!-- Превью -->
+    <div id="page0" page=0>
+        <video autoplay muted loop id="logo_video" style="background-image: url('/video/preview-water.min.jpg');">
+            <source src="/video/water.mp4" type="video/mp4">
+        </video>
+        <div class="hide-video" onclick="event.stopPropagation()"></div>
+        <div class="content">
+            <table>
+                <tr>
+                    <td>
+                        <div class="big-title">Производство и доставка<br>питьевой воды
+                            <div class="medium-text">"ДОНСКОЙ РОДНИК"</div>
+                            <div class="bottom-text">Артезианская вода</div>
+                            <a class="buy-btn" href="#page2">ЗАКАЗАТЬ ВОДУ</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- О нас -->
+    <div id="page1" page=1>
+        <div>
+            <div class="items-title">О НАС</div>
+            <div class="items-subtitle"><span class="about-name">"ДОНСКОЙ РОДНИК"</span> – завод по добыче и розливу
+                артезианской воды
+            </div>
+        </div>
+        <div class="about-container">
+            <div class="about-block">
+                <div class="about-item">
+                    <div class="about-subtitle">Качество</div>
+                    <div class="about-text"> Качество исследованных подземных вод соответствует по микробиологическим и
+                        радиологическим показателям СанПиН "Питьевая вода"
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-subtitle">Скважина</div>
+                    <div class="about-text">Скважина № 7659<br>Общая глубина скважины 114 метров</div>
+                </div>
+                <div class="about-item">
+                    <div class="about-subtitle">Продукция</div>
+                    <div class="about-text"> Широкий ассортимент бутылированной воды различной фасовки</div>
+                </div>
+            </div>
+            <div class="about-center"><img src="/images/water_glass.png"></div>
+            <div class="about-block about-right">
+                <div class="about-item">
+                    <div class="about-subtitle">Очистка</div>
+                    <div class="about-text">В процессе производства, вода проходит многоступенчатую подготовку на
+                        современном оборудовании
+                    </div>
+                </div>
+                <div class="about-item">
+                    <div class="about-subtitle">Расположение</div>
+                    <div class="about-text">Источник расположен в границах Азово-Кубанского артезианского бассейна</div>
+                </div>
+                <div class="about-item">
+<!--                    <div class="about-subtitle">Горная вода</div>-->
+<!--                    <div class="about-text">Подземные воды берутся из северного склона Большого Кавказа и правобережья-->
+<!--                        нижнего Дона, т.е. вода из скважины является горной-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Продукция -->
+    <div id="page2" page=2>
+        <div>
+            <div class="items-title">Продукция</div>
+            <div class="items-subtitle">Артезианская вода</div>
+        </div>
+        <div class="items"></div>
+    </div>
+    <!-- Контакты -->
+    <div id="page3" page=3>
+
+        <div id="logo_video" style="background-image: url('/video/contacts.min.jpg');"></div>
+        <div class="hide-video" onclick="event.stopPropagation()" style="background-color: #000a;"></div>
+        <div class="content">
+            <table>
+                <tr>
+                    <td>
+                        <div class="big-title">Контакты<br>
+                            <div class="info-text">
+                                <strong><span style="font-weight: 100;">"ДОНСКОЙ РОДНИК"</span></strong><br>
+                                <strong>Телефон:</strong>
+                                <a class="info-phone" href="https://wa.me/79612900808?text=Перезвоните мне пожалуйста"
+                                   target="_blank">
+                                    +7 (961) 290-08-08
+                                </a><br>
+                                <strong>E-mail:</strong> <a class="info-phone" style="color: white;"
+                                                            href="mailto:donskoy_rodnik@mail.ru">donskoy_rodnik@mail.ru</a><br>
+                                г. Ростов-на-Дону, ул. Максима Горького, 245<br><br>
+                                По вопросом сотрудничества, обращайтесь по выше указанным контактам или нажмите кнопку
+                                <strong>"Заказать звонок"</strong>, мы в ближайшее время перезвоним вам.
+                            </div>
+                            <a class="buy-btn" href="#page1">Заказать звонок</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Карта и футбар -->
+    <div id="page4" page=4 style="min-height: 0;">
+        <div id="map"></div>
+        <div footbar>
+            © 2020-2022 <p>"Донской родник"</p>
+        </div>
+    </div>
+</div>
+
+<!-- Слой для затемнения -->
+<div body-shadow hidden></div>
+
+<!-- Элементы сайта которые не должны скрываться при открытии всплывающих окон -->
+<div body-top>
+    <div nav-menu-extended hidden>
+        <ul>
+            <li><a class="menu-item" href="#page1">О нас</a></li>
+            <li><a class="menu-item" href="#page2">Продукция</a></li>
+            <li><a class="menu-item" href="#page3">Контакты</a></li>
+            <li><a class="menu-item profile-item">Профиль</a></li>
+        </ul>
+    </div>
+    <div action-bar-bg>
+        <div style="background-image: url('/video/preview-water-top.min.jpg'); filter: blur(10px);"></div>
+    </div>
+    <table action-bar>
+        <tr>
+            <td class="actionbar-left-td" width=1>
+                <a class="actionbar-left" href="#page0">
+                    <img src="/images/title.png">
+                </a>
+            </td>
+            <td class="actionbar-center-td">
+                <div class="actionbar-center">
+                    <div nav-menu>
+                        <ul>
+                            <li><a class="menu-item" href="#page1">О нас</a></li>
+                            <li><a class="menu-item" href="#page2">Продукция</a></li>
+                            <li><a class="menu-item" href="#page3">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div nav-menu-hidded>
+                        <a class="menu-item menu-open">Меню</a>
+                    </div>
+                </div>
+            </td>
+            <td width=1 class="actionbar-right-td">
+                <div class="menu-item actionbar-right profile-item">Профиль</div>
+            </td>
+        </tr>
+    </table>
+    <div cart-overlay onclick="Popup.show('cart')" style="display: none;">
+        <img src="/images/icon-cart.svg">
+        <div cart-count>2</div>
+    </div>
+</div>
+
+<!-- Всплывающие окна -->
+<div popups hidden>
+</div>
+
+<div popups-controls hidden>
+    <div popup-close onclick="Popup.close()"><img src="/images/icon-close.svg" alt="Закрыть"></div>
+    <div popup-back onclick="Popup.back()"><img src="/images/icon-back.svg" alt="Назад"></div>
+</div>
+
+<!-- Уведомления -->
+<div notify>
+    <div notify-block></div>
+</div>
+
+<!-- Настройки при загрузке страницы -->
+<script>
+    add_on_loads(() => {
+
+        let main_body = document.querySelector('[body]');
+        let firstpage = main_body.querySelector("[page='0']");
+        let contactpage = main_body.querySelector("[page='3']");
+        let actionbar = document.querySelector('[action-bar]');
+        let nav = document.querySelector('[nav-menu-extended]');
+
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.onclick = event => {
+                event.stopPropagation();
+                nav.hidden = !nav.hidden;
+                if (item.classList.contains('profile-item'))
+                    Popup.show('profile', event);
+            }
+        });
+
+        main_body.onscroll = () => {
+            let y = main_body.scrollTop;
+            nav.classList.toggle('scrolled-page-1', y + 1 > firstpage.scrollHeight);
+            actionbar.classList.toggle('scrolled-page-1', y + 1 > firstpage.scrollHeight);
+            main_body.classList.toggle('scrolled-page-1', y + 1 > firstpage.scrollHeight);
+            nav.classList.toggle('scrolled-page-3', y + 1 > contactpage.offsetTop);
+            actionbar.classList.toggle('scrolled-page-3', y + 1 > contactpage.offsetTop);
+            main_body.classList.toggle('scrolled-page-3', y + 1 > contactpage.offsetTop);
+            document.body.style.setProperty('--scrolled-first-page', y + 1 > firstpage.scrollHeight ? 1 : 1 - (1 / (firstpage.scrollHeight) * y));
+        };
+
+        Popup.load('profile', (popup) => {
+            if (popup != null) {
+
+
+                User.auth(async () => {
+                    Items.load_categories(async (result) => {
+                        if (result == null || result.success === 0) {
+                            Notify.error('Ошибка доступа', result.message);
+                        } else {
+                            let page = main_body.querySelector("[page='2'] .items");
+                            page.innerHTML = "";
+                            for (let i = 0; i < result.length; i++) {
+                                let block = document.createElement('div');
+                                block.classList.add('adaptive-container');
+                                page.appendChild(block);
+                                await Items.load(block, 'big-item', '.big-item', result[i].id)
+                            }
+                        }
+                    });
+                    add_on_update(User.after_auth, (signed) => {
+                        Items.load_categories(async (result) => {
+                            if (result == null || result.success == 0) {
+                                Notify.error('Ошибка доступа', result.message);
+                            } else {
+                                let page = main_body.querySelector("[page='2'] .items");
+                                page.innerHTML = "";
+                                for (let i = 0; i < result.length; i++) {
+                                    let block = document.createElement('div');
+                                    block.classList.add('adaptive-container');
+                                    page.appendChild(block);
+                                    await Items.load(block, 'big-item', '.big-item', result[i].id)
+                                }
+                            }
+                        });
+                        if (signed)
+                            Popup.hide('profile');
+                    });
+                });
+            }
+        });
+
+        let map_loader = document.createElement('script');
+        map_loader.setAttribute('async', '');
+        map_loader.setAttribute('src', 'https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0471e8d448f02252f243f3aeba23fbab605a6884a536b78ca7ff792ea8fde3d4&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;scroll=true');
+        document.querySelector('[page] #map').appendChild(map_loader);
+    });
+</script>
+</body>
+
+</html>

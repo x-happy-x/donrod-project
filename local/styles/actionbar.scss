@@ -1,0 +1,250 @@
+@import "main-cfg";
+$scrolled-first-page: var(--scrolled-first-page);
+$body-height: var(--body-height);
+$actionbar-height: var(--actionbar-height);
+$actionbar-color-1: #0c0c0c;
+
+/*#4e638c;*/
+
+$actionbar-color-2: white;
+$actionbar-color-3: #121a19;
+$actionbar-text-1: white;
+$actionbar-text-2: black;
+$actionbar-text-3: white;
+$actionbar-filter-1: none;
+$actionbar-filter-2: brightness(0);
+$actionbar-filter-3: none;
+[body-top] {
+    .menu-item {
+        user-select: none;
+        cursor: pointer;
+        color: $actionbar-text-1;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-top: 1.5px;
+        border-bottom: 3px solid transparent;
+        &:hover {
+            color: $accent-1;
+        }
+    }
+    [cart-overlay] {
+        box-shadow: -2px 2px 5px $shadow-3;
+        border: 2px solid $shadow-2;
+        cursor: pointer;
+        border-radius: 20px 0 0 20px;
+        background-color: $bg-color-3;
+        height: 60px;
+        padding: 10px;
+        right: 0;
+        bottom: $actionbar-height;
+        position: fixed;
+        img {
+            height: 100%;
+        }
+        &:hover {
+            background-color: $accent-1;
+            padding-right: 50px;
+            img {
+                filter: invert(1);
+            }
+            [cart-count] {
+                color: $accent-1;
+                background-color: $button-text-color-1;
+                border-radius: $buttons-radius;
+                padding: 2px 4px;
+                right: 50px;
+            }
+        }
+        [cart-count] {
+            top: 6px;
+            right: 10px;
+            transform: translate(50%);
+            position: absolute;
+            font-weight: bold;
+            font-size: small;
+            color: $button-text-color-1;
+            background-color: $accent-1;
+            border-radius: $buttons-radius;
+            padding: 3px 5px;
+        }
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    [nav-menu-extended] {
+        overflow: hidden;
+        position: absolute;
+        top: $actionbar-height;
+        width: 100%;
+        left: 0;
+        background-color: $actionbar-color-1;
+        text-align: center;
+        .menu-item {
+            padding: 10px;
+        }
+        li {
+            &:first-child {
+                padding-top: 20px;
+            }
+            &:last-child {
+                padding: 10px 20px;
+            }
+        }
+        @media screen and (min-width: 850px) {
+            height: 0;
+        }
+    }
+    [action-bar-bg] {
+        >* {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: calc(100vw + 30px);
+            height: calc(var(--actionbar-height) + 30px);
+            background-size: cover;
+            background-position: 50% 0;
+            object-fit: cover;
+        }
+        filter: brightness(0.8);
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: $actionbar-height;
+    }
+    [action-bar] {
+        background-color: $actionbar-color-1;
+        color: $actionbar-text-1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: $actionbar-height;
+        width: 100%;
+        text-align: center;
+        transition: all 0.2s;
+        .actionbar-left-td {
+            width: 30%;
+            @media screen and (max-width: 850px) {
+                width: 50%;
+            }
+        }
+        .actionbar-center-td {
+            width: 40%;
+            @media screen and (max-width: 850px) {
+                width: 50%;
+            }
+        }
+        .actionbar-right-td {
+            width: 30%;
+            @media screen and (max-width: 850px) {
+                width: 0%;
+            }
+        }
+        .actionbar-left {
+            vertical-align: middle;
+            text-align: center;
+            padding: 5px 0;
+            margin: 0 auto;
+            height: $actionbar-height;
+            img {
+                filter: $actionbar-filter-1;
+                height: 100%;
+                &:hover {
+                    filter: $filter-1;
+                }
+            }
+            @media screen and (max-width: 900px) {
+                width: auto;
+                margin: 0 20px;
+            }
+        }
+        .actionbar-center {
+            text-align: center;
+            vertical-align: middle;
+            [nav-menu] {
+                display: block;
+                @media screen and (max-width: 850px) {
+                    display: none;
+                }
+            }
+            [nav-menu-hidded] {
+                display: none;
+                text-align: center;
+                margin-right: 20px;
+                @media screen and (max-width: 850px) {
+                    display: block;
+                }
+            }
+            li {
+                list-style: none;
+                clear: both;
+                font-size: 16px;
+                display: inline-block;
+                white-space: nowrap;
+                padding: 0px 15px;
+            }
+        }
+        .actionbar-right {
+            font-weight: 700;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin: 0 auto;
+            text-align: center;
+            padding: 5px 0;
+            color: $actionbar-text-1;
+            &:hover {
+                color: $accent-1;
+            }
+            @media screen and (max-width: 900px) {
+                width: auto;
+                margin: 0 20px;
+            }
+            @media screen and (max-width: 850px) {
+                display: none;
+                width: 0;
+                margin: 0;
+            }
+        }
+    }
+    .scrolled-page-1 {
+        box-shadow: 4px 4px 10px $shadow-3;
+        background-color: $actionbar-color-2;
+        color: $actionbar-text-2;
+        &[nav-menu-extended] {
+            background-color: $actionbar-color-2;
+        }
+        .actionbar-left {
+            img {
+                filter: $actionbar-filter-2;
+            }
+        }
+        .menu-item {
+            color: $actionbar-text-2;
+            &:hover {
+                color: $accent-1;
+            }
+        }
+    }
+    .scrolled-page-3 {
+        box-shadow: 4px 4px 10px $shadow-3;
+        background-color: $actionbar-color-3;
+        color: $actionbar-text-3;
+        &[nav-menu-extended] {
+            background-color: $actionbar-color-3;
+        }
+        .actionbar-left {
+            img {
+                filter: $actionbar-filter-3;
+            }
+        }
+        .actionbar-text,
+        .menu-item {
+            color: $actionbar-text-3;
+            &:hover {
+                color: $accent-1;
+            }
+        }
+    }
+}

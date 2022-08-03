@@ -1,0 +1,157 @@
+[notify] {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 300px;
+  display: flexbox;
+  justify-content: right;
+}
+[notify] [notify-count] {
+  text-align: center;
+}
+[notify] [notify-count] [title] {
+  font-size: x-small;
+  text-align: center;
+  color: var(--text-color-1);
+  background-color: var(--bg-color-1);
+  border: 2px solid var(--shadow-2);
+  box-shadow: var(--shadow-2) 0px 3px 8px;
+  border-radius: var(--default-radius);
+  padding: 2px 10px;
+}
+[notify] [notifyid] {
+  background-color: var(--bg-color-3);
+  max-height: 152px;
+  min-height: 28px;
+  overflow: hidden;
+  width: 300px;
+  color: var(--text-color-1);
+  border: 2px solid var(--shadow-2);
+  box-shadow: var(--shadow-3) 0px 3px 8px;
+  margin-top: 5px;
+  padding: 5px 10px;
+  text-align: left;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--default-radius);
+  animation: scaling ease-out 0.5s;
+}
+[notify] [notifyid] [title] {
+  color: var(--text-color-1);
+  width: 275px;
+  font-size: small;
+  animation: opaciting ease-out 0.5s;
+}
+[notify] [notifyid] [mbox] {
+  animation: opaciting ease-out 0.5s;
+  max-height: 127px;
+  width: 275px;
+  overflow: auto;
+}
+[notify] [notifyid] [mbox] [message] {
+  color: var(--text-color-2);
+  font-size: smaller;
+}
+[notify] [notifyid] [mbox] [yes] {
+  color: var(--accent-2);
+  cursor: pointer;
+  padding: 5px 10px 0px 0px;
+  display: inline;
+  font-size: smaller;
+}
+[notify] [notifyid] [mbox] [no] {
+  cursor: pointer;
+  color: var(--accent-1);
+  padding: 5px 10px 0px 0px;
+  display: inline;
+  font-size: smaller;
+}
+[notify] [notifyid][notify-error] {
+  background-color: var(--accent-1);
+}
+[notify] [notifyid][notify-error] [title] {
+  color: var(--button-text-color-1);
+}
+[notify] [notifyid][notify-error] [message] {
+  color: var(--button-text-color-2);
+}
+[notify] [notifyid][deleted] {
+  animation: scaling-reverse ease-out infinite 0.6s;
+}
+[notify] [notifyid][deleted] [mbox],
+[notify] [notifyid][deleted] [title] {
+  animation: opaciting ease-out reverse infinite 0.6s;
+}
+
+@keyframes scaling {
+  0% {
+    opacity: 0;
+    margin-left: 300px;
+    max-height: 28px;
+    width: 0px;
+  }
+  10% {
+    opacity: 1;
+    margin-left: 270px;
+    width: 30px;
+  }
+  20% {
+    margin-left: 270px;
+    width: 30px;
+  }
+  60% {
+    max-height: 28px;
+  }
+  90% {
+    margin-left: -5px;
+    width: 310px;
+  }
+  95% {
+    margin-left: 5px;
+    width: 290px;
+  }
+  100% {
+    max-height: 152px;
+    width: 300px;
+  }
+}
+@keyframes scaling-reverse {
+  0% {
+    min-height: 28px;
+    max-height: 152px;
+    width: 300px;
+  }
+  25% {
+    margin-left: 272px;
+    width: 28px;
+    max-height: 28px;
+  }
+  40% {
+    opacity: 1;
+    margin-top: 5px;
+  }
+  50% {
+    opacity: 0;
+    margin-top: 0px;
+    margin-left: 300px;
+    width: 0px;
+    min-height: 0px;
+    max-height: 0px;
+  }
+}
+@keyframes opaciting {
+  0% {
+    opacity: 0;
+    overflow-y: hidden;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    overflow-y: auto;
+  }
+}
+
+/*# sourceMappingURL=notify.css.map */

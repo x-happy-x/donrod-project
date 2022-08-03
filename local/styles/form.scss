@@ -1,0 +1,297 @@
+$shadow-1: var(--shadow-1);
+$shadow-2: var(--shadow-2);
+$shadow-3: var(--shadow-3);
+$bg-color-1: var(--bg-color-1);
+$bg-color-2: var(--bg-color-2);
+$bg-color-3: var(--bg-color-3);
+$text-color-1: var(--text-color-1);
+$text-color-2: var(--text-color-2);
+$text-color-3: var(--text-color-3);
+$error-color: var(--error-color);
+$accent-1: var(--accent-1);
+$accent-2: var(--accent-2);
+$accent-3: var(--accent-3);
+$accent-4: var(--accent-4);
+$accent-5: var(--accent-5);
+$button-color-1: var(--button-color-1);
+$button-color-2: var(--button-color-2);
+$button-color-3: var(--button-color-3);
+$button-text-color-1: var(--button-text-color-1);
+$button-text-color-2: var(--button-text-color-2);
+$button-text-color-3: var(--button-text-color-3);
+$default-radius: var(--default-radius);
+
+/* Текстовые поля */
+
+input[type=text],
+input[type=password],
+input[type=number],
+textarea,
+.textbox {
+    background-color: $shadow-2;
+    color: $text-color-1;
+    border: 1px solid $shadow-1;
+    padding: 10px 10px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border-radius: $default-radius;
+    &:focus {
+        background-color: $bg-color-1;
+        border: 1px solid $text-color-1;
+    }
+    &::placeholder {
+        color: $text-color-3;
+    }
+    &.error {
+        background-color: $error-color;
+    }
+}
+
+
+/* Кнопки */
+
+input[type=button],
+input[type=submit],
+input[type=reset],
+button {
+    cursor: pointer;
+    background-color: $button-color-1;
+    border: 1px solid $shadow-1;
+    color: $button-text-color-1;
+    max-width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: 400;
+    border-radius: $default-radius;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        background-color: $bg-color-1;
+        color: $button-color-1;
+        border: 1px solid $button-color-1;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+input[type=reset] {
+    background-color: $button-color-2;
+    &:hover {
+        color: $button-color-2;
+        border: 1px solid $button-color-2;
+    }
+}
+
+button {
+    color: $button-text-color-3;
+    background-color: $button-color-3;
+    &:hover {
+        color: $button-color-3;
+        border: 1px solid $button-color-3;
+    }
+}
+
+
+/* Поле для загрузки файла */
+
+input[type=file] {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    &:hover+label {
+        background-color: var(--bg-color-1);
+        border: 1px dashed black;
+    }
+    &+label {
+        overflow: hidden;
+        border: 1px dashed var(--shadow-1);
+        transition: all 0.3s ease-in-out;
+    }
+    &+label.is-active {
+        background-color: var(--shadow-3);
+        border: 1px dashed var(--accent-2);
+    }
+}
+
+
+/* Radio и Checkbox группы*/
+
+.radio-group {
+    overflow: hidden;
+    &.vertical div {
+        margin: 5px 0px;
+    }
+    &.horizontal td {
+        padding-left: 10px;
+        &:first-child {
+            padding-left: 0px;
+        }
+    }
+    div {
+        width: 100%;
+        display: inline-block;
+        //float: left;
+    }
+    input[type=radio],
+    input[type=checkbox] {
+        display: none;
+        &:checked+label {
+            background: $button-color-1;
+            color: $button-text-color-1;
+            border: 1px solid $shadow-3;
+        }
+        &:disabled+label {
+            background: $shadow-3;
+            color: $button-text-color-3;
+        }
+    }
+    label {
+        background: $shadow-2;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+        padding: 7px 0px;
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid $shadow-1;
+        transition: all 0.2s ease-in-out;
+        user-select: none;
+        &:hover {
+            background: $bg-color-2;
+            color: $accent-1;
+            border: 1px solid $accent-1;
+        }
+    }
+}
+
+
+/* Слайдер */
+
+.range-slider,
+.range-ticks,
+.label-range {
+    display: flex;
+}
+
+.range-slider {
+    flex-flow: column nowrap;
+    margin: 0 auto;
+    max-width: 95%;
+    padding: 5px 0;
+    font-size: calc(18px + (18)*(100vw)/(2000));
+    box-sizing: border-box;
+    input[type=range] {
+        background-color: #00000050;
+        border: 1px solid var(--shadow-1);
+        font: 1em/1.5 'Poppins', sans-serif;
+        display: block;
+        padding: 0 0.3em;
+        width: 100%;
+        appearance: none;
+        &:focus {
+            background-color: #00000070;
+            outline: transparent;
+        }
+    }
+}
+
+.range-slider input[type=range],
+.range {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 40px;
+    border-radius: 40px;
+}
+
+.range-ticks {
+    font: 1em/1.5 'Poppins', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0.75em;
+    width: calc(100% - 1.5em);
+    height: 100%;
+}
+
+.range-tick,
+.range-tick-text {
+    display: inline-block;
+}
+
+.range-tick {
+    color: #454954;
+    font-size: 0.5em;
+    text-align: center;
+    width: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.range-tick-text {
+    transform: translateX(-50%);
+}
+
+.label-range {
+    font: 0.5em/1.5 'Poppins', sans-serif;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+.data-range {
+    display: flex;
+    height: 32px;
+    width: 32px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font: bold 0.5em/1.5 'Poppins', sans-serif;
+    color: $accent-1;
+    position: absolute;
+    top: 4px;
+    margin-left: 3px;
+    padding-top: 2px;
+    z-index: 2;
+    pointer-events: none;
+    background-color: white;
+    border: 3px solid $accent-1;
+    border-radius: 50%;
+}
+
+.title,
+.subtitle {
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#group-inputs,
+.input-container {
+    position: relative;
+}
+
+.placeholder {
+    opacity: 0;
+    position: absolute;
+    font-size: 12px;
+    font-weight: bolder;
+    top: -2px;
+    left: calc(5% + 5px);
+    background-color: #eaeaea;
+    border-radius: $default-radius;
+    border: 1px solid $shadow-1;
+    padding: 1px 5px;
+}
+
+.placeholder.show-placeholder {
+    opacity: 1;
+}
