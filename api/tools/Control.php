@@ -2,6 +2,8 @@
 
 namespace api\tools;
 
+use JetBrains\PhpStorm\NoReturn;
+
 class Control
 {
 
@@ -11,7 +13,7 @@ class Control
     public static Database $db;
     public static User $user;
 
-    public static function noAccess(string $text = "Вы не обладаете нужными правами для доступа к данному разделу")
+    #[NoReturn] public static function noAccess(string $text = "Вы не обладаете нужными правами для доступа к данному разделу"): void
     {
         $result = [];
         $result['success'] = 0;
@@ -44,9 +46,9 @@ class Control
      * @param bool $arg
      * @return void
      */
-    public static function start(bool|string $db = false, bool $user = false, bool $arg = true)
+    public static function start(bool|string $db = false, bool $user = false, bool $arg = true): void
     {
-        $url = ROOT_DIR . "/configs/api-settings.json";
+        $url = ROOT_DIR . "/configs/api.json";
         self::$configs = json_decode(file_get_contents($url), true);
         spl_autoload_register(function ($name) {
             $fix_name = str_replace("\\","/",$name);
