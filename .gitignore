@@ -1,5 +1,7 @@
-/.tools/
 /.old/
 /.idea/
 /backups/
 /configs/*.json
+*/__pycache__
+*.pyc
+__migration_db_data__.sql
