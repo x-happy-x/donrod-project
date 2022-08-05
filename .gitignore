@@ -1,6 +1,7 @@
 /.old/
 /.idea/
 /backups/files
+/backups/db/*.sql
 /configs/*.json
 */__pycache__
 *.pyc
