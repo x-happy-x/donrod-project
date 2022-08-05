@@ -1,13 +1,16 @@
-<div id="logo" style="text-align: center; padding: 20px">
+<br>
+<p id="logo" align="center">
     <a href="https://dr.happy-x.ru">
         <img src="images/title.png" width="200" alt="Донской родник"/>
     </a>
-</div>
-<div id='stat' style="text-align: center">
+</p>
+<br>
+<p id='stat' align="center">
     <img src='https://img.shields.io/endpoint?style=for-the-badge&url=https://dr.happy-x.ru/api/stat/dev-status.php' />
     <img src='https://img.shields.io/endpoint?style=for-the-badge&url=https://dr.happy-x.ru/api/stat/all-items.php' />
     <img src='https://img.shields.io/endpoint?style=for-the-badge&url=https://dr.happy-x.ru/api/stat/all-users.php' />
-</div>
+</p>
+<br>
 
 ### [Тестовый сервер][server]
 
