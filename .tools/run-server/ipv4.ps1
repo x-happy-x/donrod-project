@@ -1,3 +1,6 @@
+Param (
+    [string]$config
+)
 $HostIP = (
     Get-NetIPConfiguration |
     Where-Object {
@@ -5,5 +8,5 @@ $HostIP = (
         $_.NetAdapter.Status -ne "Disconnected"
     }
 ).IPv4Address.IPAddress
-$config = Get-Content .\configs\tools.json | ConvertFrom-Json
-php -S "$($HostIP):$($config.port)"
+$TOOLS = Get-Content $config | ConvertFrom-Json
+php -S "$($HostIP):$($TOOLS.port)"

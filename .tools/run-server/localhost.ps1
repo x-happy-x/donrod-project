@@ -1,2 +1,5 @@
-$config = Get-Content .\configs\tools.json | ConvertFrom-Json
-php -S "localhost:$($config.port)"
+Param (
+    [string]$config
+)
+$TOOLS = Get-Content $config | ConvertFrom-Json
+php -S "localhost:$($TOOLS.port)"
