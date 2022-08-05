@@ -27,6 +27,6 @@ for ($i = 0; $i -lt $MigrationList.Count; $i++) {
     $dbR   = $RemoteDB
 
     Write-Host "Migration: $($servL):$($dbL) > $($servR):$($dbR)"
-    python.exe .\.tools\migration-db\mysqldbcopy.py --source="$($userL):$($passL)@$($servL):$($portL)" --dest="$($userR):$($passR)@$($servR):$($portR)" --database="$($dbL):$($dbR)"
+    python.exe .\.tools\mysql_db_migrate.py --source="$($userL):$($passL)@$($servL):$($portL)" --dest="$($userR):$($passR)@$($servR):$($portR)" --database="$($dbL):$($dbR)"
 
 }

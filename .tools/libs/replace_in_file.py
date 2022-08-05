@@ -1,8 +1,8 @@
-import arg
+from . import arg
 
 def replace_in_file(file, func, opcodec='utf-8', clcodec='utf-8', end='\n'):
     import os
-    path, file = os.path.splitdrive(file)
+    path, file = os.path.split(file)
     orig_file = os.path.join(path, file)
     tmp_file = os.path.join(path, 'tmp_'+file)
     with open(orig_file, 'r', encoding=opcodec,) as fr:

@@ -1,6 +1,6 @@
 /.old/
 /.idea/
-/backups/
+/backups/files
 /configs/*.json
 */__pycache__
 *.pyc
