@@ -9,14 +9,13 @@ $BackupList = Get-Content $backups | ConvertFrom-Json
 for ($i = 0; $i -lt $BackupList.Count; $i++) {
 
     $BackupItem = $BackupList[$i]
-    $LocalConnection = $TOOLS.'local-db'[$BackupItem.'connection-id']
-    $LocalDB = $BackupItem.'database'
+    $Connection = $TOOLS."$($BackupItem.'connection')-db"[$BackupItem.'connection-id']
 
-    $user = $LocalConnection.user
-    $pass = $LocalConnection.password
-    $serv = $LocalConnection.server
-    $port = $LocalConnection.port
-    $db   = $LocalDB
+    $user = $Connection.user
+    $pass = $Connection.password
+    $serv = $Connection.server
+    $port = $Connection.port
+    $db   = $BackupItem.'database'
 
     Write-Host "Backup: $($serv):$($db)"
     python.exe .\.tools\mysql_db_backup.py --source="$($user):$($pass)@$($serv):$($port)" --database=$db --path="$($TOOLS.'backups_dir')"

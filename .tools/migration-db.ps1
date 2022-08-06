@@ -9,22 +9,20 @@ $MigrationList = Get-Content $migration | ConvertFrom-Json
 for ($i = 0; $i -lt $MigrationList.Count; $i++) {
 
     $MigrationItem = $MigrationList[$i]
-    $LocalConnection = $TOOLS.'local-db'[$MigrationItem.'local-connection-id']
-    $RemoteConnection = $TOOLS.'remote-db'[$MigrationItem.'remote-connection-id']
-    $LocalDB = $MigrationItem.'local-db'
-    $RemoteDB = $MigrationItem.'remote-db'
+    $SourceConnection = $TOOLS."$($MigrationItem.'source-connection')-db"[$MigrationItem.'source-connection-id']
+    $DestConnection = $TOOLS."$($MigrationItem.'dest-connection')-db"[$MigrationItem.'dest-connection-id']
 
-    $userL = $LocalConnection.user
-    $passL = $LocalConnection.password
-    $servL = $LocalConnection.server
-    $portL = $LocalConnection.port
-    $dbL   = $LocalDB
+    $userL = $SourceConnection.user
+    $passL = $SourceConnection.password
+    $servL = $SourceConnection.server
+    $portL = $SourceConnection.port
+    $dbL   = $MigrationItem.'source-db'
 
-    $userR = $RemoteConnection.user
-    $passR = $RemoteConnection.password
-    $servR = $RemoteConnection.server
-    $portR = $RemoteConnection.port
-    $dbR   = $RemoteDB
+    $userR = $DestConnection.user
+    $passR = $DestConnection.password
+    $servR = $DestConnection.server
+    $portR = $DestConnection.port
+    $dbR   = $MigrationItem.'dest-db'
 
     Write-Host "Migration: $($servL):$($dbL) > $($servR):$($dbR)"
     python.exe .\.tools\mysql_db_migrate.py --source="$($userL):$($passL)@$($servL):$($portL)" --dest="$($userR):$($passR)@$($servR):$($portR)" --database="$($dbL):$($dbR)"

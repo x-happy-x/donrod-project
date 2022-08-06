@@ -48,18 +48,30 @@
     .\.tools\run-server\ipv4.ps1 -config .\configs\tools.json
 
 ### База данных
-Перенос локальной базы данных осуществляется следующим скриптом:
+
+Резервное копирование:
+
+    .\.tools\backup-db.ps1 -config .\configs\tools.json -backups .\configs\backups-db.json
+
+Восстановление копии:
+
+    .\.tools\restore-db.ps1 -config .\configs\tools.json -restore .\configs\restore-db.json
+
+Перенос базы данных:
 
     .\.tools\migration-db.ps1 -config .\configs\tools.json -migration .\configs\migration-db.json
 
-> Для запуска скрипта должны быть установлены: PowerShell, Python, MySQL
+> Для запуска скриптов должны быть установлены: PowerShell, Python, MySQL
+
+> Все упомянутые выше конфиги описаны ниже
 
 ### Конфигурации
 *Содержимое файла - `tools.json`*:
 
     {
-      "port": "39153", // Порт для тестирования сервера 
-      "local-db": [    // Локальные подключения базы данных
+      "port": "39153",              // Порт для тестирования сервера 
+      "backups_dir": "backups/db/", // Путь к резервным копиям базы
+      "local-db": [                 // Локальные подключения базы данных
         {
           "user": "root",           // Имя пользователя
           "password": "1234",       // Пароль
@@ -77,14 +89,38 @@
       ]
     }
 
+*Содержимое файла - `backups-db.json`*:
+
+    [
+      {
+        "connection": "local",              // Тип подключения (local | remote)
+        "connection-id": 0,                 // Индекс указанного подключения из файла tools.json
+        "database": "j955969_donrod"        // База данных, копию которой нужно создать
+      }
+    ]
+
+*Содержимое файла - `restore-db.json`*:
+
+    [
+      {
+        "connection": "local",              // Тип подключения (local | remote)
+        "connection-id": 0,                 // Индекс указанного подключения из файла tools.json
+        "filter": "j955969_donrod*.sql",    // Фильт для поиска резервных копий
+        "backup-id": 1,                     // Индекс файла с конца
+        "database": "j955969_donrod"        // База данных куда восстанавливается копия
+      }
+    ]
+
 *Содержимое файла - `migration-db.json`*:
 
     [
       {
-        "local-connection-id": 0,    // Индекс локального подключения из файла tools.json
-        "remote-connection-id": 0,   // Индекс удаленного подключения из файла tools.json
-        "local-db": "donrod_test",   // Название локальной базы данных
-        "remote-db": "donrod"        // Название удаленной базы данных
+        "source-connection": "local",   // Тип исходного подключения (local | remote)
+        "source-connection-id": 0,      // Индекс исходного подключения из файла tools.json
+        "source-db": "j955969_donrod",  // Переносимая база данных
+        "dest-connection": "remote",    // Тип конечного подключения (local | remote)
+        "dest-connection-id": 0,        // Индекс конечного подключения из файла tools.json
+        "dest-db": "j955969_donrod"     // Заменяемая база данных
       }
     ]
 
