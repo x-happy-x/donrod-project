@@ -44,7 +44,8 @@ class MailX
                 }
             }
             $mail->addReplyTo($this->config['reply-mail'], $this->config['name']);
-            $mail->addBCC($this->config['bcc-mail']);
+            if (isset($this->config['bcc-mail']))
+                $mail->addBCC($this->config['bcc-mail']);
 
             // Прикрепить файлы
             if ($attachment != null) {
@@ -83,15 +84,15 @@ class MailX
 
     public function sendTemplate(Database $db, array|string $to, string $template, array $keys, $attachment = null, $useSMTP = false): bool|string
     {
-        $subjectText = $db->run_and_get("user/mail/get-template",['name'=>$template . '-title']);
+        $subjectText = $db->run_and_get("user/mail/get-template", ['name' => $template . '-title']);
         if (!is_string($subjectText)) {
-            echo 'dassd'.$subjectText. $db->error;
+            echo 'dassd' . $subjectText . $db->error;
             return $db->error();
         }
         $subjectText = Templates::templateText($subjectText, $keys);
-        $messageText = $db->run_and_get("user/mail/get-template",['name'=>$template . '-message']);
+        $messageText = $db->run_and_get("user/mail/get-template", ['name' => $template . '-message']);
         if (!is_string($messageText)) {
-            echo 'dassd'.$messageText. $db->error;
+            echo 'dassd' . $messageText . $db->error;
             return $db->error();
         }
         $messageText = Templates::templateText($messageText, $keys);
