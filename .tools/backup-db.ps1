@@ -19,6 +19,6 @@ for ($i = 0; $i -lt $BackupList.Count; $i++) {
     $db   = $LocalDB
 
     Write-Host "Backup: $($serv):$($db)"
-    python.exe .\.tools\mysql_db_backup.py --source="$($user):$($pass)@$($serv):$($port)" --database=$db
+    python.exe .\.tools\mysql_db_backup.py --source="$($user):$($pass)@$($serv):$($port)" --database=$db --path="$($TOOLS.'backups_dir')"
 
 }
