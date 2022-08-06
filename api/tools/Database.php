@@ -94,9 +94,9 @@ namespace api\tools {
             return $res;
         }
 
-        public function get($key, $table, $where)
+        public function get($key, $table, $where = null)
         {
-            $res = $this->query("SELECT $key FROM $table WHERE $where LIMIT 1");
+            $res = $this->query("SELECT $key FROM $table ".(is_string($where) && strlen($where) > 1?"WHERE $where ":"")." LIMIT 1");
             try {
                 $res = $res->fetch_row();
                 if (is_array($res) && count($res) > 0)
@@ -109,7 +109,7 @@ namespace api\tools {
             return $res;
         }
 
-        public function count($table, $where)
+        public function count($table, $where = null)
         {
             return $this->get("count(*)", $table, $where);
         }
