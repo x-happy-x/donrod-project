@@ -93,9 +93,9 @@
 
     [
       {
-        "connection": "local",              // Тип подключения (local | remote)
-        "connection-id": 0,                 // Индекс указанного подключения из файла tools.json
-        "database": "j955969_donrod"        // База данных, копию которой нужно создать
+        "connection": "local",      // Тип подключения (local | remote)
+        "connection-id": 0,         // Индекс указанного подключения из файла tools.json
+        "database": "donrod"        // База данных, копию которой нужно создать
       }
     ]
 
@@ -103,11 +103,11 @@
 
     [
       {
-        "connection": "local",              // Тип подключения (local | remote)
-        "connection-id": 0,                 // Индекс указанного подключения из файла tools.json
-        "filter": "j955969_donrod*.sql",    // Фильт для поиска резервных копий
-        "backup-id": 1,                     // Индекс файла с конца
-        "database": "j955969_donrod"        // База данных куда восстанавливается копия
+        "connection": "local",      // Тип подключения (local | remote)
+        "connection-id": 0,         // Индекс указанного подключения из файла tools.json
+        "filter": "donrod*.sql",    // Фильт для поиска резервных копий
+        "backup-id": 1,             // Индекс файла с конца
+        "database": "donrod"        // База данных куда восстанавливается копия
       }
     ]
 
@@ -117,10 +117,10 @@
       {
         "source-connection": "local",   // Тип исходного подключения (local | remote)
         "source-connection-id": 0,      // Индекс исходного подключения из файла tools.json
-        "source-db": "j955969_donrod",  // Переносимая база данных
+        "source-db": "donrod",          // Переносимая база данных
         "dest-connection": "remote",    // Тип конечного подключения (local | remote)
         "dest-connection-id": 0,        // Индекс конечного подключения из файла tools.json
-        "dest-db": "j955969_donrod"     // Заменяемая база данных
+        "dest-db": "donrod"             // Заменяемая база данных
       }
     ]
 
@@ -138,7 +138,7 @@
     {
         "user": "root",             // Имя пользователя
         "password": "1234",         // Пароль
-        "database": "donrod_test",  // Имя базы данных
+        "database": "donrod",  // Имя базы данных
         "server": "localhost",      // Сервер
         "port": "3306"              // Порт
     }
